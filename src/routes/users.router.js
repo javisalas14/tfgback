@@ -1,9 +1,9 @@
 import { Router } from "express";
+import {methods as usersController} from "./../controllers/users.controller" ;
+
 
 const router = Router();
 
-router.get("/",(req,res) => {
-    res.send("Respuesta Usuarios")
-});
+router.get("/",usersController.getUsuarios);
 
 export default router;
